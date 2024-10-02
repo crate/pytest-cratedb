@@ -47,8 +47,12 @@ jobs:
 
     - name: Set up project
       run: |
+
+        # Adjust baseline dependencies.
+        pip install --prefer-binary --upgrade --requirement=requirements-dev.txt
+
         # Install package in editable mode.
-        pip install --use-pep517 --prefer-binary --editable=.[develop]
+        pip install --prefer-binary --editable=.[develop]
 
         # Needs to be invoked manually upfront.
         # https://github.com/python/mypy/issues/11103
