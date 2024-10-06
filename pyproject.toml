@@ -92,7 +92,7 @@ urls.Homepage = "https://github.com/crate-workbench/pytest-cratedb"
 urls.Issues = "https://github.com/crate-workbench/pytest-cratedb/issues"
 urls.Repository = "https://github.com/crate-workbench/pytest-cratedb"
 
-entry-points.pytest11.crate = "pytest_crate.plugin:crate"
+entry-points.pytest11.crate = "pytest_cratedb.plugin:crate"
 
 [tool.black]
 line-length = 88
@@ -167,7 +167,7 @@ log_level = "DEBUG"
 log_cli_level = "DEBUG"
 log_format = "%(asctime)-15s [%(name)-36s] %(levelname)-8s: %(message)s"
 testpaths = [
-  "pytest_crate",
+  "pytest_cratedb",
   "tests",
 ]
 xfail_strict = true
@@ -176,7 +176,7 @@ markers = [
 
 [tool.coverage.paths]
 source = [
-  "pytest_crate/",
+  "pytest_cratedb/",
 ]
 
 [tool.coverage.run]
@@ -196,7 +196,7 @@ exclude_lines = [
 [tool.mypy]
 #mypy_path = "src"
 packages = [
-  "pytest_crate",
+  "pytest_cratedb",
 ]
 exclude = [
 ]
