@@ -31,11 +31,10 @@ setup(
     extras_require={
         "develop": [
             "flake8<3.8",
-            "mypy<1",
+            "mypy<1.12",
             "pytest-cov<5",
             "pytest-flake8<2",
             "pytest-isort<4",
-            "pytest-mypy<0.11",
         ],
     },
     entry_points={
