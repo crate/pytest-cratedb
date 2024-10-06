@@ -57,8 +57,8 @@ def test_crate_with_custom_settings(custom_crate_b):
     with connect(custom_crate_b.dsn()) as conn:
         cursor = conn.cursor()
         for stmt, expected in [
-                ["SELECT name FROM sys.cluster", ["crate_b"]],
-                ["SELECT name FROM sys.nodes", ["custom-node-name"]],
+            ["SELECT name FROM sys.cluster", ["crate_b"]],
+            ["SELECT name FROM sys.nodes", ["custom-node-name"]],
         ]:
             cursor.execute(stmt)
             assert cursor.fetchone() == expected
