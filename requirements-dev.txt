@@ -1,2 +1,0 @@
-pip<23
-setuptools<70

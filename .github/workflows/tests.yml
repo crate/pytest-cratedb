@@ -48,9 +48,6 @@ jobs:
     - name: Set up project
       run: |
 
-        # Adjust baseline dependencies.
-        pip install --prefer-binary --upgrade --requirement=requirements-dev.txt
-
         # Install package in editable mode.
         pip install --prefer-binary --editable=.[develop]
 
