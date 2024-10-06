@@ -132,28 +132,12 @@ lint.select = [
 ]
 
 lint.extend-ignore = [
-  # zip() without an explicit strict= parameter
-  "B905",
-  # df is a bad variable name. Be kinder to your future self.
-  "PD901",
-  # Unnecessary variable assignment before `return` statement
-  "RET504",
-  # Unnecessary `elif` after `return` statement
-  "RET505",
-  # Probable insecure usage of temporary file or directory
-  "S108",
-  # Possible SQL injection vector through string-based query construction
-  "S608",
-]
-
-lint.per-file-ignores."examples/*" = [
-  "ERA001", # Found commented-out code
-  "T201",   # Allow `print`
 ]
 
 lint.per-file-ignores."tests/*" = [
-  "S101", # Allow use of `assert`, and `print`.
+  "S101", # Allow use of `assert`.
 ]
+
 
 [tool.pytest.ini_options]
 addopts = """
@@ -189,12 +173,9 @@ omit = [
 fail_under = 0
 show_missing = true
 exclude_lines = [
-  "# pragma: no cover",
-  "raise NotImplemented",
 ]
 
 [tool.mypy]
-#mypy_path = "src"
 packages = [
   "pytest_cratedb",
 ]
@@ -207,7 +188,6 @@ implicit_optional = true
 install_types = true
 namespace_packages = true
 non_interactive = true
-# enable_recursive_aliases = true
 
 [tool.versioningit.vcs]
 method = "git"
