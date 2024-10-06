@@ -1,26 +1,22 @@
 import os
 from pathlib import Path
 
-from pkg_resources.extern.packaging.version import Version
 from setuptools import setup
 
-# a version must be PEP 440 compliant
-__version__ = Version("0.4.dev0")
 
-
-def cwd() -> Path:
+def here() -> Path:
     return Path(os.path.dirname(__file__))
 
 
 def read(path: str) -> str:
-    filepath: Path = cwd() / path
+    filepath: Path = here() / path
     with open(filepath.absolute(), "r", encoding="utf-8") as f:
         return f.read()
 
 
 setup(
     name="pytest-cratedb",
-    version=str(__version__),
+    version="0.4.0.dev0",
     description="Manages CrateDB instances during your integration tests",
     long_description=read("README.rst"),
     author="Christian Haudum",
@@ -59,6 +55,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Topic :: Software Development :: Testing",
         "Topic :: Database",
     ],
