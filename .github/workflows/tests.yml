@@ -52,12 +52,13 @@ jobs:
         pip install --prefer-binary --editable=.[develop]
 
         # Needs to be invoked manually upfront.
+        # error: --install-types not supported in this mode of running mypy
         # https://github.com/python/mypy/issues/11103
-        mypy --install-types --non-interactive pytest_crate
+        mypy pytest_crate tests
 
     - name: Run linters and software tests
       run: |
-        pytest --cov pytest_crate -vvvs
+        pytest
         coverage xml
 
     - name: Upload coverage to Codecov
