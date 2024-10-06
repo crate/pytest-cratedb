@@ -19,13 +19,13 @@ def read(path: str) -> str:
 
 
 setup(
-    name="pytest-crate",
+    name="pytest-cratedb",
     version=str(__version__),
     description="Manages CrateDB instances during your integration tests",
     long_description=read("README.rst"),
     author="Christian Haudum",
     author_email="developer@christianhaudum.at",
-    url="https://github.com/chaudum/pytest-crate",
+    url="https://github.com/crate-workbench/pytest-cratedb",
     packages=["pytest_crate"],
     install_requires=[
         "cr8",
