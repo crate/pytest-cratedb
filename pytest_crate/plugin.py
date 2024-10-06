@@ -17,7 +17,6 @@ logger = logging.getLogger(__name__)
 
 
 class CrateLayer:
-
     node: CrateNode
     crate_dir: str
     tmp: str
@@ -89,7 +88,7 @@ class CratePlugin:
             "--crate-version",
             dest="crate_version",
             default="latest-stable",
-            help="CrateDB version"
+            help="CrateDB version",
         )
 
     @pytest.fixture(scope="session")
@@ -101,13 +100,14 @@ class CratePlugin:
         def layer_factory(name: str, version: str, **settings):
             with CrateLayer(name, version, **settings) as layer:
                 yield layer
+
         yield layer_factory
 
     @pytest.fixture(scope="session")
     def crate(self, crate_layer, crate_version) -> CrateLayerGenerator:
-        id = "".join(random.sample(string.ascii_letters, 8))
+        ident = "".join(random.sample(string.ascii_letters, 8))
         date = datetime.utcnow().strftime("%Y%m%d%H%M")
-        yield from crate_layer(f"pytest-cratedb-{date}-{id}", crate_version)
+        yield from crate_layer(f"pytest-cratedb-{date}-{ident}", crate_version)
 
     @pytest.fixture
     def crate_cursor(self, crate) -> Generator[Cursor, None, None]:
