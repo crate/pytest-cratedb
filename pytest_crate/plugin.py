@@ -107,7 +107,7 @@ class CratePlugin:
     def crate(self, crate_layer, crate_version) -> CrateLayerGenerator:
         id = "".join(random.sample(string.ascii_letters, 8))
         date = datetime.utcnow().strftime("%Y%m%d%H%M")
-        yield from crate_layer(f"pytest-crate-{date}-{id}", crate_version)
+        yield from crate_layer(f"pytest-cratedb-{date}-{id}", crate_version)
 
     @pytest.fixture
     def crate_cursor(self, crate) -> Generator[Cursor, None, None]:
