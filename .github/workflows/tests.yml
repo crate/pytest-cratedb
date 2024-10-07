@@ -22,8 +22,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-latest"]
-        python-version: ["3.7", "3.12"]
+        os: [
+          "ubuntu-latest",
+          "macos-12",
+          "macos-latest",
+        ]
+        python-version: ["3.7", "3.11", "3.12"]
+
+        # Doesn't work on macOS (ARM) with older versions of Python.
+        exclude:
+          - os: 'macos-latest'
+            python-version: '3.7'
 
     env:
       OS: ${{ matrix.os }}
@@ -46,6 +55,12 @@ jobs:
 
     - name: Set up project
       run: |
+
+        # `setuptools 0.64.0` adds support for editable install hooks (PEP 660).
+        # https://github.com/pypa/setuptools/blob/main/CHANGES.rst#v6400
+        pip install "setuptools>=64" --upgrade
+
+        # Install package in editable mode.
         pip install --prefer-binary --editable=.[develop,test]
 
     - name: Run linters and software tests
