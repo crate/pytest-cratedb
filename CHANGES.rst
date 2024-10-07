@@ -5,6 +5,12 @@ Changelog for pytest-cratedb
 Unreleased
 ==========
 
+2024/10/08 0.4.0
+================
+- Modernized package
+- Renamed package to ``pytest-cratedb``
+- Published maintenance release
+
 2019/05/28 0.3.0
 ================
 
