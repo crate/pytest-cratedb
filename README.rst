@@ -57,10 +57,32 @@ for further examples.
 Migration Notes
 ===============
 This package, `pytest-cratedb`_ is a drop-in replacement for its predecessor
-package `pytest-crate`_.
+package `pytest-crate`_. It is recommended to uninstall the latter package
+before install the newer one in your Python environment.
+
+Documentation and Help
+======================
+- `CrateDB Python Client documentation`_
+- `CrateDB reference documentation`_
+- `CrateDB cr8 utilities`_
+- Other `support channels`_
+
+Contributions
+=============
+The Pytest CrateDB Plugin is an open source project, and is `managed on
+GitHub`_. We appreciate contributions of any kind.
 
 
-.. _CrateDB: https://cratedb.com
+.. _crate-python: https://pypi.org/project/crate/
+.. _CrateDB: https://github.com/crate/crate
+.. _CrateDB Python Client documentation: https://cratedb.com/docs/python/
+.. _CrateDB cr8 utilities: https://github.com/mfussenegger/cr8/
+.. _CrateDB reference documentation: https://cratedb.com/docs/reference/
+.. _DB API 2.0: https://peps.python.org/pep-0249/
+.. _managed on GitHub: https://github.com/crate/pytest-cratedb
+.. _PyPI: https://pypi.org/
 .. _pytest: https://docs.pytest.org
+.. _support channels: https://cratedb.com/support/
+
 .. _pytest-crate: https://pypi.org/project/pytest-crate/
 .. _pytest-cratedb: https://pypi.org/project/pytest-cratedb/
