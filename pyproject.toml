@@ -18,7 +18,7 @@ keywords = [
 license = { text = "Apache License 2.0" }
 authors = [
   { name = "Christian Haudum", email = "developer@christianhaudum.at" },
-  { name = "Andreas Motl", email = "andreas.motl@panodata.org" },
+  { name = "Andreas Motl", email = "andreas.motl@crate.io" },
 ]
 requires-python = ">=3.6"
 classifiers = [
@@ -86,11 +86,9 @@ optional-dependencies.test = [
   "pytest-cov<6",
   "pytest-mock<4",
 ]
-urls.Changelog = "https://github.com/crate-workbench/pytest-cratedb/blob/main/CHANGES.rst"
-urls.Documentation = "https://github.com/crate-workbench/pytest-cratedb"
-urls.Homepage = "https://github.com/crate-workbench/pytest-cratedb"
-urls.Issues = "https://github.com/crate-workbench/pytest-cratedb/issues"
-urls.Repository = "https://github.com/crate-workbench/pytest-cratedb"
+urls.Changelog = "https://github.com/crate/pytest-cratedb/blob/main/CHANGES.rst"
+urls.Issues = "https://github.com/crate/pytest-cratedb/issues"
+urls.Repository = "https://github.com/crate/pytest-cratedb"
 
 entry-points.pytest11.crate = "pytest_cratedb.plugin:crate"
 
