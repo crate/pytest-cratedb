@@ -57,8 +57,8 @@ for further examples.
 Migration Notes
 ===============
 This package, `pytest-cratedb`_ is a drop-in replacement for its predecessor
-package `pytest-crate`_. It is recommended to uninstall the latter package
-before install the newer one in your Python environment.
+package `pytest-crate`_. It is recommended to uninstall pytest-crate
+before installing pytest-cratedb in your Python environment.
 
 Documentation and Help
 ======================
@@ -82,7 +82,6 @@ GitHub`_. We appreciate contributions of any kind.
 .. _managed on GitHub: https://github.com/crate/pytest-cratedb
 .. _PyPI: https://pypi.org/
 .. _pytest: https://docs.pytest.org
-.. _support channels: https://cratedb.com/support/
-
 .. _pytest-crate: https://pypi.org/project/pytest-crate/
 .. _pytest-cratedb: https://pypi.org/project/pytest-cratedb/
+.. _support channels: https://cratedb.com/support/
