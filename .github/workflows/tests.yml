@@ -27,7 +27,10 @@ jobs:
           "macos-12",
           "macos-latest",
         ]
-        python-version: ["3.7", "3.11", "3.12"]
+        python-version: [
+          "3.7",
+          "3.13",
+        ]
 
         # Doesn't work on macOS (ARM) with older versions of Python.
         exclude:
