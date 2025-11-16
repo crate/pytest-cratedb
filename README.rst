@@ -62,6 +62,7 @@ before installing pytest-cratedb in your Python environment.
 
 Documentation and Help
 ======================
+- `Software testing with CrateDB`_
 - `CrateDB Python Client documentation`_
 - `CrateDB reference documentation`_
 - `CrateDB cr8 utilities`_
@@ -84,4 +85,5 @@ GitHub`_. We appreciate contributions of any kind.
 .. _pytest: https://docs.pytest.org
 .. _pytest-crate: https://pypi.org/project/pytest-crate/
 .. _pytest-cratedb: https://pypi.org/project/pytest-cratedb/
+.. _Software testing with CrateDB: https://cratedb.com/docs/guide/topic/testing/
 .. _support channels: https://cratedb.com/support/
