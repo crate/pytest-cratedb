@@ -23,17 +23,19 @@ jobs:
       fail-fast: false
       matrix:
         os: [
-          "ubuntu-22.04",
-          "macos-13",
-          "macos-latest",
+          "ubuntu-22.04",    # Intel
+          "macos-15-intel",  # Intel
+          "macos-latest",    # ARM
         ]
         python-version: [
           "3.7",
           "3.14",
         ]
 
-        # Doesn't work on macOS (ARM) with older versions of Python.
+        # Doesn't work on macOS with older versions of Python.
         exclude:
+          - os: 'macos-15-intel'
+            python-version: '3.7'
           - os: 'macos-latest'
             python-version: '3.7'
 
