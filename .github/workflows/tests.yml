@@ -29,7 +29,7 @@ jobs:
         ]
         python-version: [
           "3.7",
-          "3.13",
+          "3.14",
         ]
 
         # Doesn't work on macOS (ARM) with older versions of Python.
