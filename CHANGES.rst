@@ -5,6 +5,7 @@ Changelog for pytest-cratedb
 Unreleased
 ==========
 - Maintenance: Fixed type hint for ``CrateLayer::dsn(self) -> Optional[str]``
+- CI: Validated against Python 3.14
 
 2024/10/08 v0.4.0
 =================
