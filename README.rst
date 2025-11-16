@@ -6,29 +6,32 @@ Pytest CrateDB
     :target: https://github.com/crate/pytest-cratedb/actions/workflows/tests.yml
     :alt: Build status
 
+.. image:: https://img.shields.io/pypi/status/pytest-cratedb.svg
+    :target: https://pypi.org/project/pytest-cratedb/
+    :alt: Status
+
 .. image:: https://codecov.io/gh/crate/pytest-cratedb/graph/badge.svg?token=OGZKWMMGMN
     :target: https://app.codecov.io/gh/crate/pytest-cratedb
     :alt: Coverage
-
-.. image:: https://img.shields.io/pypi/v/pytest-cratedb.svg
-    :target: https://pypi.org/project/pytest-cratedb/
-    :alt: PyPI Version
-
-.. image:: https://img.shields.io/pypi/pyversions/pytest-cratedb.svg
-    :target: https://pypi.org/project/pytest-cratedb/
-    :alt: Python Version
 
 .. image:: https://static.pepy.tech/badge/pytest-cratedb/month
     :target: https://pepy.tech/project/pytest-cratedb
     :alt: PyPI Downloads
 
-.. image:: https://img.shields.io/pypi/status/pytest-cratedb.svg
+|
+
+.. image:: https://img.shields.io/pypi/v/pytest-cratedb.svg
     :target: https://pypi.org/project/pytest-cratedb/
-    :alt: Status
+    :alt: PyPI Version
 
 .. image:: https://img.shields.io/pypi/l/pytest-cratedb.svg
     :target: https://pypi.org/project/pytest-cratedb/
     :alt: License
+
+.. image:: https://img.shields.io/pypi/pyversions/pytest-cratedb.svg
+    :target: https://pypi.org/project/pytest-cratedb/
+    :alt: Python Version
+
 
 |
 
