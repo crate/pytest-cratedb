@@ -6,7 +6,7 @@ Pytest CrateDB
     :target: https://github.com/crate/pytest-cratedb/actions/workflows/tests.yml
     :alt: Build status
 
-.. image:: https://codecov.io/gh/crate/pytest-cratedb/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/crate/pytest-cratedb/graph/badge.svg?token=OGZKWMMGMN
     :target: https://app.codecov.io/gh/crate/pytest-cratedb
     :alt: Coverage
 
