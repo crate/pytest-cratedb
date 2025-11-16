@@ -4,7 +4,7 @@ import shutil
 import string
 import tempfile
 from datetime import datetime
-from typing import Callable, Generator
+from typing import Callable, Generator, Optional
 
 import pytest
 from cr8.run_crate import CrateNode, get_crate
@@ -58,7 +58,7 @@ class CrateLayer:
         shutil.rmtree(self.tmp, ignore_errors=True)
         logger.debug(f"{self} stopped")
 
-    def dsn(self) -> str:
+    def dsn(self) -> Optional[str]:
         return self.node.http_url
 
     @property
