@@ -30,6 +30,7 @@ jobs:
           "ubuntu-22.04",    # Intel
           "macos-15-intel",  # Intel
           "macos-latest",    # ARM
+          "windows-latest",  # Intel
         ]
         python-version: [
           "3.7",
@@ -47,7 +48,10 @@ jobs:
       OS: ${{ matrix.os }}
       PYTHON: ${{ matrix.python-version }}
 
-    name: Python ${{ matrix.python-version }} on OS ${{ matrix.os }}
+    name: "
+    Python ${{ matrix.python-version }}
+    OS ${{ matrix.os }}
+    "
     steps:
 
     - name: Acquire sources
