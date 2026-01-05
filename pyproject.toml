@@ -74,7 +74,7 @@ dynamic = [
 dependencies = [
   "cr8",
   "crate",
-  "pytest<9",
+  "pytest<10",
 ]
 optional-dependencies.develop = [
   "mypy<1.20",
