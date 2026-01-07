@@ -32,7 +32,7 @@ jobs:
           "macos-latest",    # ARM
         ]
         python-version: [
-          "3.7",
+          "3.8",
           "3.14",
         ]
 
@@ -55,6 +55,7 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v6
+      id: python
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64
@@ -73,6 +74,8 @@ jobs:
         pip install --prefer-binary --editable=.[develop,test]
 
     - name: Run linters and software tests
+      env:
+        VIRTUAL_ENV: ${{ steps.python.outputs.python-path }}
       run: |
         poe check
 
