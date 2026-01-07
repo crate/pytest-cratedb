@@ -75,7 +75,7 @@ jobs:
 
     - name: Run linters and software tests
       env:
-        VIRTUAL_ENV: ${{ steps.python.outputs.python-path }}
+        VIRTUAL_ENV: ${{ env.pythonLocation }}
       run: |
         poe check
 
