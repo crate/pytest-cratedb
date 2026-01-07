@@ -1,10 +1,10 @@
+import datetime as dt
 import logging
 import random
 import shutil
 import string
 import tempfile
-from datetime import datetime
-from typing import Callable, Generator, Optional
+from typing import Callable, Dict, Generator, Optional
 
 import pytest
 from cr8.run_crate import CrateNode, get_crate
@@ -29,11 +29,11 @@ class CrateLayer:
     def __repr__(self) -> str:
         return f"<CrateDB {self.name}>"
 
-    def __enter__(self):
+    def __enter__(self) -> "CrateLayer":
         self._start()
         return self
 
-    def __exit__(self, exception_type, exception_value, traceback):
+    def __exit__(self, exception_type, exception_value, traceback) -> None:
         self._stop()
 
     def _start(self) -> None:
@@ -62,7 +62,7 @@ class CrateLayer:
         return self.node.http_url
 
     @property
-    def addresses(self):
+    def addresses(self) -> Dict[str, str]:
         return self.node.addresses
 
 
@@ -78,7 +78,7 @@ class CratePlugin:
 
     # noinspection SpellCheckingInspection
     @staticmethod
-    def pytest_addoption(parser):
+    def pytest_addoption(parser) -> None:
         """
         Adds custom options to the ``pytest`` command.
         https://docs.pytest.org/en/latest/writing_plugins.html#_pytest.hookspec.pytest_addoption
@@ -106,7 +106,7 @@ class CratePlugin:
     @pytest.fixture(scope="session")
     def crate(self, crate_layer, crate_version) -> CrateLayerGenerator:
         ident = "".join(random.sample(string.ascii_letters, 8))
-        date = datetime.utcnow().strftime("%Y%m%d%H%M")
+        date = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M")
         yield from crate_layer(f"pytest-cratedb-{date}-{ident}", crate_version)
 
     @pytest.fixture
