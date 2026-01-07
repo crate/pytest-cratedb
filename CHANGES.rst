@@ -4,6 +4,7 @@ Changelog for pytest-cratedb
 
 Unreleased
 ==========
+- Maintenance: Switched type checker from ``mypy`` to ``ty``
 
 2026/01/05 v0.4.1
 =================

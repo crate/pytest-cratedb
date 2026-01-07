@@ -77,10 +77,10 @@ dependencies = [
   "pytest<10",
 ]
 optional-dependencies.develop = [
-  "mypy<1.20",
   "poethepoet<1",
   "pyproject-fmt<3",
   "ruff<0.15",
+  "ty",
   "validate-pyproject<1",
 ]
 optional-dependencies.release = [
@@ -177,20 +177,6 @@ show_missing = true
 exclude_lines = [
 ]
 
-[tool.mypy]
-packages = [
-  "pytest_cratedb",
-]
-exclude = [
-]
-check_untyped_defs = true
-explicit_package_bases = true
-ignore_missing_imports = true
-implicit_optional = true
-install_types = true
-namespace_packages = true
-non_interactive = true
-
 [tool.versioningit.vcs]
 method = "git"
 default-tag = "0.0.0"
@@ -218,7 +204,7 @@ lint = [
   { cmd = "ruff format --check ." },
   { cmd = "ruff check ." },
   { cmd = "validate-pyproject pyproject.toml" },
-  { cmd = "mypy" },
+  { cmd = "ty check" },
 ]
 
 release = [
