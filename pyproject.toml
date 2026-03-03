@@ -73,7 +73,7 @@ dynamic = [
 ]
 dependencies = [
   "cr8",
-  "crate",
+  "crate>=2.1.0.dev3",
   "pytest<10",
 ]
 optional-dependencies.develop = [
