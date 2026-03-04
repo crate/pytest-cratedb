@@ -13,3 +13,4 @@ build/
 dist/
 .coverage
 coverage.xml
+*.lock
