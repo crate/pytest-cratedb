@@ -3,6 +3,7 @@ env/
 __pycache__/
 .eggs/
 *.egg-info/
+*.lock
 .idea/
 .cache
 .pytest_cache
