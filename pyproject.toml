@@ -177,10 +177,6 @@ show_missing = true
 exclude_lines = [
 ]
 
-[tool.versioningit.vcs]
-method = "git"
-default-tag = "0.0.0"
-
 # ===================
 # Tasks configuration
 # ===================
@@ -221,3 +217,12 @@ options = [ "-k" ]
 
 [tool.poe.tasks.test.args.marker]
 options = [ "-m" ]
+
+[tool.versioningit]
+vcs.method = "git-archive"
+vcs.default-tag = "v0.0.0"
+vcs.describe-subst = "$Format:%(describe:tags,match=v*)$"
+# Emit PyPI-compatible "dirty" version strings. `+` characters are unsuitable, because
+# they would designate local version identifiers, which do not upload to PyPI.
+# https://packaging.python.org/en/latest/specifications/version-specifiers/#local-version-identifiers
+format.distance = "{base_version}.dev{distance}"
