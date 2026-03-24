@@ -71,6 +71,21 @@ Documentation and Help
 - `CrateDB cr8 utilities`_
 - Other `support channels`_
 
+Development
+===========
+Acquire the source code and invoke the software tests::
+
+    git clone https://github.com/crate/pytest-cratedb
+    cd pytest-cratedb
+    uv venv --python 3.14 --seed .venv
+    source .venv/bin/activate
+    uv pip install --upgrade --editable='.[develop,test,release]'
+    poe check
+
+Format the code before submitting patches::
+
+    poe format
+
 Contributions
 =============
 The Pytest CrateDB Plugin is an open source project, and is `managed on
